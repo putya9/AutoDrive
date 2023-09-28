@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoDrive.Pages.ProfilePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F0F5F9"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ПРОФИЛЬ" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#1E2022" FontSize="48" FontAttributes="Bold"></Label>
+            <ListView x:Name="ClientList" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout>
+                                    <Label FontSize="24" TextColor="#1E2022">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="ФИО: " FontAttributes="Bold" FontSize="24"></Span>
+                                                    <Span Text="{Binding firstName}"></Span>
+                                                    <Span Text=" "></Span>
+                                                    <Span Text="{Binding lastName}"></Span>
+                                                    <Span Text=" "></Span>
+                                                    <Span Text="{Binding patronymic}"></Span>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="24" TextColor="#1E2022">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Паспорт: " FontAttributes="Bold" FontSize="24"></Span>
+                                                    <Span Text="{Binding passport}"></Span>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="24" TextColor="#1E2022">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Водительское удостоверение: " FontAttributes="Bold" FontSize="24"></Span>
+                                                    <Span Text="{Binding drivingLicense}"></Span>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="32" TextColor="#1E2022">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Номер телефона: " FontAttributes="Bold" FontSize="24"></Span>
+                                                    <Span Text="{Binding phoneNumber}"></Span>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                    <Button HorizontalOptions="FillAndExpand" CornerRadius="20" BorderColor="#1E2022" BorderWidth="3" FontAttributes="Bold" BackgroundColor="#F0F5F9" Text="Мои заказы" x:Name="BtnOrders" Clicked="BtnOrders_Clicked"></Button>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

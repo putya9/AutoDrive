@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoDrive.Pages.RegPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F0F5F9">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label Text="AUTO" FontSize="64" TextColor="#1E2022" AbsoluteLayout.LayoutBounds="130,0" FontAttributes="Bold"></Label>
+            <Label Text="DRIVE" FontSize="36" TextColor="#1E2022" AbsoluteLayout.LayoutBounds="195,60"></Label>
+            <Image Source="Icon" AbsoluteLayout.LayoutBounds="100,20,90,130"></Image>
+            <Entry Placeholder="Номер телефона" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,120,150,40" TextColor="#1E2022" x:Name="PhoneEntr" MaxLength="11" Keyboard="Telephone"></Entry>
+            <Entry Placeholder="Пароль" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,160,150,40" TextColor="#1E2022" x:Name="PasswordEntr" IsPassword="True" ></Entry>
+            <Entry Placeholder="Имя" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,200,150,40" TextColor="#1E2022" x:Name="NameEntr"></Entry>
+            <Entry Placeholder="Фамилия" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,240,150,40" TextColor="#1E2022" x:Name="LastNEntr"></Entry>
+            <Entry Placeholder="Отчество" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,280,150,40" TextColor="#1E2022" x:Name="PatrEntr"></Entry>
+            <Entry Placeholder="Паспорт" PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,320,150,40" TextColor="#1E2022" x:Name="PassportEntr" MaxLength="11"></Entry>
+            <Entry Placeholder="Вод. Удост." PlaceholderColor="#1E2022" AbsoluteLayout.LayoutBounds="130,360,150,40" TextColor="#1E2022" x:Name="DriveLicEntr" MaxLength="10"></Entry>
+            <Button x:Name="BtnReg" Text="Регистрация" BorderColor="#1E2022" BorderWidth="3" FontAttributes="Bold" BackgroundColor="#F0F5F9" CornerRadius="20" AbsoluteLayout.LayoutBounds="150,450" Clicked="BtnReg_Clicked"></Button>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
